@@ -126,7 +126,7 @@ header .navbar ul li a{
 
 header .navbar ul li a.active,
 header .navbar ul li a:hover{
-    color:var(--purple);
+    color: black;
 }
 
 
@@ -331,9 +331,10 @@ header .navbar ul li a:hover{
 }
 
 .about .content h3{
-    font-size: 4rem;
+    font-size: 5rem;
     color:#333;
     text-align: justify;
+    letter-spacing: 2px;
 }
 
 .about .content p{

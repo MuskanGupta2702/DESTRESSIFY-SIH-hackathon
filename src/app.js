@@ -46,14 +46,14 @@ app.use(express.urlencoded({ extended: false }));
 const initializePassport = require("./utils/passportConfig");
 initializePassport(passport, email => {
     return new Promise((resolve, reject) => {
-        const sql = "SELECT * FROM `userdetail` WHERE `email` = '" + email + "'";
+        const sql = "SELECT * FROM `student_register` WHERE `email` = '" + email + "'";
         connection.query(sql, (err, rows) => {
             resolve(rows[0]);
         })
     })
 }, id => {
     return new Promise((resolve, reject) => {
-        const sql = "SELECT * FROM `userdetail` WHERE `id` = " + id + "";
+        const sql = "SELECT * FROM `student_register` WHERE `id` = " + id + "";
         connection.query(sql, (err, rows) => {
             resolve(rows[0]);
         })
@@ -70,60 +70,93 @@ app.get('/orgStu', (req, res) => {
     res.render("orgStu")
 })
 
+app.get('/login', (req, res) => {
+    res.render("logSign")
+})
+
+app.get('/register', (req, res) => {
+    res.render("OrgLog")
+})
+
+app.get('/test', (req, res) => {
+    res.render("quiz")
+})
+
+app.get('/quiz1', (req, res) => {
+    res.render("quiz1")
+})
+app.get('/quiz2', (req, res) => {
+    res.render("quiz2")
+})
+
 
 
 app.post("/login", checkNotAuthenticated, passport.authenticate("local", {
-    successRedirect: "/userdashboard",
-    failureRedirect: "/",
+    successRedirect: "/video-calling",
+    failureRedirect: "/login",
     failureFlash: true,
 }))
 
 
 //patient signup
-app.get("/register", checkNotAuthenticated, (req, res) => {
-    res.render("register")
-})
-
-// const checkAlreayExist = (email) => {
-//     return new Promise((resolve, reject) => {
-//         let sql1 = "SELECT * FROM `userdetail` WHERE `email` LIKE '" + email + "' AND `status` LIKE 'patient'";
-//         connection.query(sql1, (err, rows) => {
-//             if (rows.length > 0) {
-//                 reject();
-//             } else {
-//                 resolve();
-//             }
-//         })
-//     })
-// }
-
-
-// app.post("/register", checkNotAuthenticated, async (req, res) => {
-//     try {
-//         res.set({ 'Content-Type': 'application/json' });
-//         let name = req.body.name;
-//         let email = req.body.email;
-//         let password = req.body.password
-//         // let password = await bcrypt.hash(req.body.password, 10);
-//         console.log(name + email + password)
-//         await checkAlreayExist(email);
-//         const sql = "INSERT INTO `userdetail` (`id`, `name`, `email`, `password`, `status`) VALUES (NULL, '" + name + "', '" + email + "', '" + password + "', 'patient');"
-//         connection.query(sql, (err, rows) => {
-//             if (!err) {
-//                 return res.send({
-//                     msg: "Account Created",
-//                 });
-//             } else {
-//                 res.redirect("/");
-//             }
-//         })
-//     } catch (err) {
-//         // console.log("inside catch");
-//         return res.send({
-//             msg: "Email already registered",
-//         });
-//     }
+// app.get("/register", checkNotAuthenticated, (req, res) => {
+//     res.render("register")
 // })
+
+const checkAlreayExist = (email) => {
+    return new Promise((resolve, reject) => {
+        let sql1 = "SELECT * FROM `student_register` WHERE `email` LIKE '" + email + "'";;
+        // let sql1 = `SELECT * FROM student_register WHERE email LIKE ${email}`;
+        connection.query(sql1, (err, rows) => {
+            if (rows.length > 0) {
+                reject();
+            } else {
+                resolve();
+            }
+        })
+    })
+}
+
+
+app.post("/register_student", checkNotAuthenticated, async (req, res) => {
+    try {
+        res.set({ 'Content-Type': 'application/json' });
+        let name = req.body.username;
+        let email = req.body.email;
+        let password = req.body.password;
+        let pname = req.body.pname;
+        let pemail = req.body.pemail;
+        let counsellor_name = req.body.counsellor_name;
+        let counsellor_email = req.body.counsellor_email;
+        let clg_name = req.body.organisation;
+        let university = req.body.university;
+        let class1 = req.body.class;
+        // let birthday = req.body.birthday;
+        let phone = req.body.phone;
+
+        // let password = await bcrypt.hash(req.body.password, 10);
+        console.log(name + email + password)
+        await checkAlreayExist(email);
+        // const sql = `INSERT INTO student_register (username,email, password, parent_name, p_email, counsellor_name, c_email, clg_name, university, class, phone_no) VALUES(${name}, ${email}, ${password}, ${pname}, ${pemail}, ${counsellor_name}, ${counsellor_email}, ${clg_name}, ${university} ,${class1}, ${phone})`
+
+        const sql ="INSERT INTO `student_register` (`username`, `email`, `password`, `parent_name`, `p_email`, `counsellor_name`, `c_email`, `clg_name`, `university`, `class`, `phone_no`) VALUES ('" + name + "', '" + email + "', '" + password + "', '" + pname + "', '" + pemail + "', '" + counsellor_name + "', '" + counsellor_email + "', '" + clg_name + "', '" + university + "', '" + class1 + "', '" + phone + "');"
+
+        connection.query(sql, (err, rows) => {
+            if (!err) {
+                return res.send({
+                    msg: "Account Created",
+                });
+            } else {
+                res.redirect("/");
+            }
+        })
+    } catch (err) {
+        // console.log("inside catch");
+        return res.send({
+            msg: "Email already registered",
+        });
+    }
+})
 
 
 // const checkAlreayExistDr = (email) => {
@@ -192,8 +225,4 @@ function checkNotAuthenticated(req, res, next) {
 server.listen(port, () => {
     console.log(`Server is running at http://${hostname}:${port}/`)
 })
-
-
-
-
 

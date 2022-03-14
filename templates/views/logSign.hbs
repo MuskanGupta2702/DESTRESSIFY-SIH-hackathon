@@ -9,7 +9,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <link rel="stylesheet" href="logSign.css" />
+    <link rel="stylesheet" href="css/logSign.css" />
   </head>
   <body>
     <div class="controls">
@@ -20,39 +20,41 @@
     <div class="container">
       <div class="form-container">
         <div class="sign-in">
-          <form class="form_signIn"  method="post">
+          <form class="form_signIn"  method="post" action="/login">
             <i class="fa fa-user" aria-hidden="true"></i>
             <h2>Sign In</h2>
-            <input type="text" placeholder="username" class="box" />
-            <input type="password" placeholder="password" class="box" />
+            <input name="email" type="email" placeholder="Enter your email" class="box" />
+            <input name="password" type="password" placeholder="password" class="box" />
             <input type="submit" value="Sign In" />
             <a href="#">Forgot password?</a>
           </form>
         </div>
         <div class="sign-up">
-          <form class=""  method="post">
+          <form action="/register_student"  method="post">
             <i class="fa fa-user" aria-hidden="true"></i>
             <h2>Sign Up</h2>
-            <input type="text" placeholder="username" class="box" />
-            <input type="email" placeholder="e-mail" class="box" />
-            <input type="password" placeholder="password" class="box" />
-            <input type="passowrd" placeholder="Confirm password" class="box" />
-            <input type="text" placeholder="Parent name" class="box" />
-            <input type="email" placeholder="Parent email" class="box" />
-            <input type="text" placeholder="Counsellor name" class="box" />
-            <input type="email" placeholder="Concellor email" class="box" />
-            <input type="text" placeholder="Organization" class="box" />
-            <input type="text" placeholder="University" class="box" />
-            <input type="text" placeholder="Grade/Class" class="box" />
-            <input type="submit" value="Sign In" />
+            <input name="username" type="text" placeholder="username" class="box" />
+            <input name="email" type="email" placeholder="e-mail" class="box" />
+            <input name="password" type="password" placeholder="password" class="box" />
+            <input name="cpassword" type="passowrd" placeholder="Confirm password" class="box" />
+            <input name="pname" type="text" placeholder="Parent name" class="box" />
+            <input name="pemail" type="email" placeholder="Parent email" class="box" />
+            <input name="counsellor_name" type="text" placeholder="Counsellor name" class="box" />
+            <input name="counsellor_email" type="email" placeholder="Concellor email" class="box" />
+            <input name="organisation" type="text" placeholder="Organization" class="box" />
+            <input name="university" type="text" placeholder="University" class="box" />
+            <input name="class" type="text" placeholder="Grade/Class" class="box" />
+            <input name="phone" type="number" placeholder="Enter your phone number here" class="box" />
+            {{!-- <input type="date" placeholder="dob" id="birthday" name="birthday"> --}}
+            <input type="submit" value="Sign Up"/>
             <a href="#">Forgot password?</a>
           </form>
         </div>
       </div>
       <div class="image-container">
         <div class="images">
-          <img src="Mobile login.gif" />
-          <img src="Forgot password.gif" />
+          <img src="images/Mobile login.gif" />
+          <img src="images/Forgot password.gif" />
         </div>
       </div>
     </div>
