@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: arial;
+    transition: all 0.2s ease;
+  }
+  :root {
+    --color: #c272cf;
+  }
+  html {
+    font-size: 62.5%;
+  }
+  body {
+    height: 100vh;
+    background: url(Vector.png) no-repeat;
+    background-size: 100% 25%;
+    background-position: top;
+  }
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 19rem auto;
+  }
+  .form-container {
+    display: flex;
+    align-items: center;
+    height: 70rem;
+    width: 33rem;
+    overflow-x: hidden;
+  }
+  form {
+    height: 55rem;
+    width: 30rem;
+    margin-left: 2rem;
+    display: grid;
+    place-items: center;
+    border: 1px solid #ccc;
+    box-shadow: 9px 9px 0px var(--color);
+    border-radius: 1rem;
+    background: #fff;
+  }
+  .form_signIn{
+    height: 35rem;
+  }
+  form i {
+    font:20rem;
+    color: var(--color);
+    margin-top: -4rem;
+    background: #fff;
+    height: 6rem;
+    width: 6rem;
+    text-align: center;
+    border: 1rem solid #fff;
+  }
+  form h2 {
+    font-size: 2rem;
+    color: #333;
+  }
+  form .box {
+    height: 3rem;
+    width: 80%;
+    padding: 0 2rem;
+    outline: none;
+    border: none;
+    background: #e6e6e6;
+    color: #333;
+    border-radius: 5rem;
+  }
+  form input[type="submit"] {
+    height: 3rem;
+    width: 6rem;
+    margin-left: -15rem;
+    background: #333;
+    color: #fff;
+    border: none;
+    outline: none;
+    border-radius: 5rem;
+    cursor: pointer;
+  }
+  form input[type="submit"]:hover {
+    background: var(--color);
+  }
+  form a {
+    font-size: 1.5rem;
+    color: #333;
+    margin-left: -11rem;
+  }
+  .container .images {
+    width: 40rem;
+    display: flex;
+    align-items: center;
+    overflow-x: hidden;
+  }
+  .container .images > img {
+    height: 36rem;
+    margin-top: 1rem;
+    margin-left: -18rem;
+  }
+  .controls {
+    position: absolute;
+    top: 10rem;
+    right: 21%;
+    height: 6rem;
+    width: 15rem;
+    overflow: hidden;
+  }
+  .controls h1 {
+    color: #fff;
+    border: 0.2rem solid #fff;
+    padding: 1rem 2rem;
+    margin-top: 1rem;
+    border-radius: 5rem;
+    cursor: pointer;
+    text-align: center;
+  }
+  @media (max-width: 750px) {
+    .container .images > img {
+      display: none;
+    }
+    .container .images {
+      width: 0;
+    }
+    .container {
+      justify-content: center;
+      margin-top: 25rem;
+    }
+    .controls {
+      right: 10%;
+    }
+  }
+  @media (max-width: 400px) {
+    html {
+      font-size: 50%;
+    }
+    body {
+      background-size: 100% 20%;
+    }
+    .container {
+      margin-top: 30rem;
+    }
+  }

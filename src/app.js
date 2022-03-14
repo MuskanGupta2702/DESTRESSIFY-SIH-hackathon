@@ -66,6 +66,11 @@ app.get('/', (req, res) => {
     res.render("home")
 })
 
+app.get('/orgStu', (req, res) => {
+    res.render("orgStu")
+})
+
+
 
 app.post("/login", checkNotAuthenticated, passport.authenticate("local", {
     successRedirect: "/userdashboard",

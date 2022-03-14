@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: arial;
+    transition: all 0.2s ease;
+  }
+  :root {
+    --color: #c272cf;
+  }
+  html {
+    font-size: 62.5%;
+  }
+  body {
+    height: 100vh;
+    background: url(Vector.png) no-repeat;
+    background-size: 100% 25%;
+    background-position: top;
+    height:900px;
+  }
+  .container{
+    display:flex; 
+    margin-left: 25%;
+  }
+ img{
+     display:flex;
+     margin-top:55%;
+     clip-path: circle(50% at 50% 50%);
+     margin-right:200px;
+    
+     
+ }

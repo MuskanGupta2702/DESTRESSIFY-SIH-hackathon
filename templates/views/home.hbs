@@ -2,11 +2,343 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DESTRESSIFY</title>
+    <title>Mental Health Surveillance tool</title>
+
+    <!-- aos css cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+    <!-- google fonts cdn link  -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;500&family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet">
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css">
+
 </head>
-<body>
-    <h1>Hello peers</h1>
+<body >
+    
+<!-- header section starts  -->
+
+<header>
+
+    
+    <a href="#" class="logo"> <img src="images/mental-health.png"><p>  Destressify</p>  </a>
+    
+
+    
+
+    <nav class="navbar">
+        <ul>
+            <li><a class="active" href="#home">home</a></li>
+            <li><a href="#services">service</a></li>
+            <li><a href="#about">about</a></li>
+            <li><a href="#faq">QnA</a></li>
+            <li><a href="/orgStu">Login</a></li>
+            <li><a href="#" data-toggle="dropdown" class="btn btn-primary dropdown-toggle ">Sign up</a></li>
+            
+        </ul>
+
+        
+    </nav>
+
+</header>
+
+<!-- header section ends -->
+
+<!-- home section starts  -->
+
+<section class="home" id="home" >
+    
+        <div class="slides-container" data-ride="carousel">
+    
+            <div class="slide active">
+                <div class="content" data-aos="fade-right" >
+                    <h3>Mental Health is a priority</h3>
+                    <p>Destressify is a surveillance tools to assess and track prevalence of mental health issues and untangle congenital and acquired conditions to provide for appropriate remediation and counselling.
+                    You don’t have to struggle in silence!</p>
+                    <a href="#"><button class="btn">Join US</button></a>
+                </div>
+                <div class="image" data-aos="fade-up">
+                    <img src="images/img1f1.png" alt="">
+                </div>
+            </div>
+
+            
+    
+            <div class="slide" >
+                <div class="content" data-aos="fade-right">
+                    <h3>Mental health is not a destination</h3>
+                    <p>It is a process. It's about how you drive, not where you're going. Sometimes the people around you won’t understand your journey. They don’t need to, it’s not for them</p>
+                   
+                </div>
+                <div class="image" data-aos="fade-up">
+                    <img src="images/quote1f.png" alt="">
+                </div>
+            </div>
+    
+            <div class="slide" >
+                <div class="content" data-aos="fade-right">
+                    <h3>Start prioritizing your mental health</h3>
+                    <p>It's up to you today to start making healthy choices. Not choices that are just healthy for your body, but healthy for your mind.</p>
+                    
+                </div>
+                <div class="image" data-aos="fade-up">
+                    <img src="images/quote2f.png" alt="">
+                </div>
+            </div>
+
+            <div class="slide" >
+                <div class="content" data-aos="fade-right">
+                    <h3>You deserve it</h3>
+                    <p>You can't control everything. Sometimes you just need to relax and have faith that things will work out. Let go a little and just let life happen</p>
+                    
+                </div>
+                <div class="image" data-aos="fade-up">
+                    <img src="images/quote3f.png" alt="">
+                </div>
+            </div>
+            </div>
+    
+        </div>
+    
+        <div id="next-slide" class="fas fa-angle-right" onclick="next()"></div>
+        <div id="prev-slide" class="fas fa-angle-left" onclick="next()"></div>
+    
+
+</section>
+
+<!-- home section ends -->
+
+<!-- service section starts -->
+
+<section class="services" id="services">
+
+    <div class="heading">
+        <span>our services</span>
+        <h1>what we provide?</h1>
+    </div>
+
+    <div class="box-container">
+
+        <div class="box">
+            <img src="images/service1.png" alt="">
+            <h3>Relief Chatbot</h3>
+            <p>An informated AI tool to identify mental health issues</p>
+        </div>
+
+        <div class="box">
+            <img src="images/service2.png" alt="">
+            <h3>Video Consultancy</h3>
+            <p>To provide a professional help by scheduling appointment with mental health professionals online </p>
+        </div>
+
+        <div class="box">
+            <img src="images/service3.png" alt="">
+            <h3>Psychometric test</h3>
+            <p>It assess and track prevalence of mental health issues and untangle congenital and acquired conditions to provide for appropriate remediation and counselling</p>
+        </div>
+
+        <div class="box">
+            <img src="images/service4.png" alt="">
+            <h3>Insightful Tracker</h3>
+            <p>Track how you are doing with a digital psychological diary and get insights to feel better.</p>
+        </div>
+
+        <div class="box">
+            <img src="images/service5.png" alt="">
+            <h3>Recommened activities</h3>
+            <p>Engage in simple guided activities handpicked by our therapists to help you unwind.</p>
+        </div>
+
+        <div class="box">
+            <img src="images/service6.png" alt="">
+            <h3>Know your mental health better</h3>
+            <p>Self-assessment along with teacher and parent-assessmentprovisions.</p>
+        </div>
+        
+    </div>
+
+</section>
+
+<!-- services section ends -->
+
+<!-- about section starts  -->
+
+<section class="about" id="about">
+
+    <div class="image" data-aos="fade-right"></div>
+
+    <div class="content" data-aos="fade-left">
+        <h3>a word about us</h3>
+        <p>a surveillance tools to assess and track prevalence of mental health issues and untangle congenital and acquired conditions to provide for appropriate remediation and counselling. Also, to help organization to provide a helping hand for students in need.
+            To also understand oneself better by understanding and managing the unknown thoughts along with tracking mental health improvement</p>
+        <a href="#"><button class="btn">Join US</button></a>
+    </div>
+
+</section>
+
+<!-- about section ends -->
+
+
+
+
+<section class="faq" id="faq">
+
+    <div class="heading">
+        <span>Let's understand our Mental Health better!</span>
+        <h1>Something to think about</h1>
+    </div>
+
+    <div class="accordion-container">
+
+        <div class="accordion">
+            <div class="accordion-heading">
+                <h3>Are unhelpful feelings and thoughts taking over your life?</h3>
+                <i class="fas fa-angle-down"></i>
+            </div>
+            <p class="accordion-content">
+                Distress is when our feelings and thoughts get out of control and start to take over. It’s worth having a close look at how you have been thinking or feeling lately
+                Have you noticed any of these changes in yourself? 
+            </p>
+        </div>
+
+        <div class="accordion">
+            <div class="accordion-heading">
+                <h3>Have you noticed yourself doing things differently lately?</h3>
+                <i class="fas fa-angle-down"></i>
+            </div>
+            <p class="accordion-content">
+                If you’re not feeling right, your behaviour is likely to be affected. You might not have realised that these changes on the outside had anything to do with the way you are feeling or thinking on the inside.
+            </p>
+        </div>
+
+        <div class="accordion">
+            <div class="accordion-heading">
+                <h3>Is it depression or just a bad day?</h3>
+                <i class="fas fa-angle-down"></i>
+            </div>
+            <p class="accordion-content">
+                If you’ve been feeling really miserable for more than two weeks you’re not just going through a phase. Having a low mood or feeling on edge are common experiences for us all. When these moods persist, it may be that you are experiencing depression or anxiety
+            </p>
+        </div>  
+
+        <div class="accordion">
+            <div class="accordion-heading">
+                <h3>What lead to depression?</h3>
+                <i class="fas fa-angle-down"></i>
+            </div>
+            <p class="accordion-content">
+                There may be some things that have happened to you that make it more likely you might experience distress. Family history, childhood, upbringing and even genetics can play a part.
+                Along with the past the major changes those you are goin through can also be one of the reasons
+                Also, Distressing experiences can cause emotional and psychological trauma. The experience might be a terrible one-off event or an ongoing series of stressful events. Either way, the effect can be deeply harmful.    
+            </p>
+        </div>  
+
+        <div class="accordion">
+            <div class="accordion-heading">
+                <h3>Can I get better?</h3>
+                <i class="fas fa-angle-down"></i>
+            </div>
+            <p class="accordion-content">
+                Even when it seems you can’t control your feelings, you can control what you do about things. Just taking a small first step is enough to get you on the path to enjoying life again. And it’ll work so much better if you don’t try to go it alone.
+            </p>
+        </div>  
+
+        <div class="accordion">
+            <div class="accordion-heading">
+                <h3>how to treat depression and anxiety?</h3>
+                <i class="fas fa-angle-down"></i>
+            </div>
+            <p class="accordion-content">
+                Health professionals have a range of ways they can help you get on top of the way you are thinking, feeling or behaving. This can make it easier for you to start dealing with the issues in your life. It’s important that you find the treatment, or mix, that’s right for you.
+            </p>
+        </div>  
+
+        <div class="accordion">
+            <div class="accordion-heading">
+                <h3>Want to help, but not sure how?</h3>
+                <i class="fas fa-angle-down"></i>
+            </div>
+            <p class="accordion-content">
+                Often it’s easy to tell when someone isn’t their usual self, but it’s a lot harder to know what to do to help, or even how to raise the issue with them. Don’t be afraid to start the conversation. There are all sorts of things you can do to make a difference.    
+            </p>
+        </div>  
+
+    </div>
+
+</section>
+
+<!-- faq section ends -->
+
+<!-- footer section starts  -->
+
+<div class="footer">
+
+    <div class="box-container">
+
+        <div class="box">
+            <h3>contact info</h3>
+            <p> <i class="fas fa-map-marker-alt"></i> mumbai, India - 400050 </p>
+            <p> <i class="fas fa-envelope"></i> genericgenius@gmail.com </p>
+            <p> <i class="fas fa-phone"></i> +91 1234567890 </p>
+            <p> <i class="fas fa-phone"></i> +91 1111222233 </p>
+        </div>
+
+        <div class="box">
+            <h3>Helpline Numbers</h3>
+            <p>Toll- Free number 1800-599-0019</p>
+        </div>
+
+        <div class="box">
+            <h3>quick links </h3>
+            <a href="#home">home</a>
+            <a href="#services">services</a>
+            <a href="#about">about</a>
+            <a href="#faq">QnA</a>
+            
+        </div>
+
+        <div class="box">
+            <h3>follow us</h3>
+            <a href="#"><i class='fab fa-instagram'></i> instagram</a>
+            <a href="#"><i class="fab fa-facebook-square" aria-hidden="true"></i> facebook</a>
+            <a href="#"><i class="fab fa-twitter"></i> twitter</a>
+            <a href="#"><i class="fab fa-linkedin" aria-hidden="true"></i> linkedin</a>
+        </div>
+
+    </div>
+
+    <h1 class="credit">created by <a href="#">Generic Genius</a></h1>
+
+</div>
+
+<!-- footer section ends -->
+
+
+
+<!-- aos js cdn link  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+<!-- jquery cdn link  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<!-- custom js file link  -->
+<script src="js/script.js"></script>
+
+<!-- initializing aos  -->
+
+<script>
+
+    AOS.init({
+        delay:400,
+        duration:1000
+    })
+
+</script>
+
 </body>
 </html>
