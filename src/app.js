@@ -53,7 +53,7 @@ initializePassport(passport, email => {
     })
 }, id => {
     return new Promise((resolve, reject) => {
-        const sql = "SELECT * FROM `student_register` WHERE `id` = " + id + "";
+        const sql = "SELECT * FROM `student_register` WHERE `st_register_id` = " + id + "";
         connection.query(sql, (err, rows) => {
             resolve(rows[0]);
         })
@@ -89,10 +89,13 @@ app.get('/quiz2', (req, res) => {
     res.render("quiz2")
 })
 
-
+app.post("/quiz1_score", (req, res) => {
+    console.log(req.body)
+    res.send("Submit")
+})
 
 app.post("/login", checkNotAuthenticated, passport.authenticate("local", {
-    successRedirect: "/video-calling",
+    successRedirect: "/",
     failureRedirect: "/login",
     failureFlash: true,
 }))

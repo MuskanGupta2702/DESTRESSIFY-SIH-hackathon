@@ -180,6 +180,17 @@ function showResult(){
     quiz_box.classList.remove("activeQuiz"); //hide quiz box
     result_box.classList.add("activeResult"); //show result box
     const scoreText = result_box.querySelector(".score_text");
+
+    let cont = {
+        userScore: userScore
+    }
+    console.log(userScore)
+    $.post("/quiz1_score", cont,
+        function (data, status) {
+            console.log(data);
+            return false;
+        });
+
     if (userScore >= 0 && userScore <=4){ // if user scored more than 3
         //creating a new span tag and passing the user score number and total question number
         let scoreTag = '<span><p>Congrats! 🎉,Your score is '+ userScore+ ', You have no signs of depression </span>';
